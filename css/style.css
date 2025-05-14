@@ -7,6 +7,29 @@
     box-sizing: border-box;
 }
 
+/* Classe para elementos visíveis apenas para leitores de tela */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Variáveis de Animação */
+:root {
+    --transition-speed: 0.3s;
+    --transition-timing: ease-in-out;
+    --hover-scale: 1.03;
+    --hover-brightness: 1.05;
+    --scroll-top-size: 3rem;
+    --scroll-top-margin: 1.5rem;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -34,6 +57,12 @@ a {
     color: inherit;
 }
 
+a:focus-visible {
+    outline: 2px solid var(--focus-color);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
 ul,
 ol {
     list-style: none;
@@ -43,11 +72,15 @@ ol {
 :root {
     --primary-color: #F5F5F5;       /* Branco Suave */
     --secondary-color: #E0D8D3;    /* Bege Rosado */
-    --accent-color-wood: #A07855;   /* Madeira Clara */
-    --accent-color-pastel: #D4E2D4; /* Verde Pastel Suave */
-    --text-color: #333333;          /* Cinza Escuro para contraste */
-    --header-bg-color: #FFFFFF;     /* Fundo do cabeçalho, pode ser ajustado */
-    --footer-bg-color: #ECECEC;     /* Fundo do rodapé, pode ser ajustado */
+    --accent-color-wood: #8B6B4A;   /* Madeira Escurecida para melhor contraste */
+    --accent-color-pastel: #C4D2C4; /* Verde Pastel Suave ajustado */
+    --text-color: #222222;          /* Cinza mais Escuro para melhor contraste */
+    --header-bg-color: #FFFFFF;     /* Fundo do cabeçalho */
+    --footer-bg-color: #ECECEC;     /* Fundo do rodapé */
+    --error-color: #D32F2F;         /* Vermelho mais escuro para erros */
+    --success-color: #2E7D32;       /* Verde mais escuro para sucesso */
+    --focus-color: #1976D2;         /* Azul mais escuro para foco */
+    --focus-ring-color: rgba(25, 118, 210, 0.4); /* Cor para anéis de foco */
 }
 
 /* Tipografia (Sugestões Iniciais da Ellen) */
@@ -66,6 +99,43 @@ h1, h2, h3, h4, h5, h6 {
     width: 90%;
     max-width: 1100px;
     margin: 0 auto;
+}
+
+/* Classes de Animação */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity var(--transition-speed) var(--transition-timing),
+                transform var(--transition-speed) var(--transition-timing);
+}
+
+.slide-in {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity var(--transition-speed) var(--transition-timing),
+                transform var(--transition-speed) var(--transition-timing);
+}
+
+.visible {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.text-reveal {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.reveal {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hover {
+    transform: scale(var(--hover-scale));
+    filter: brightness(var(--hover-brightness));
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 header {
@@ -133,6 +203,34 @@ main section:nth-child(even) {
     background-color: var(--primary-color); /* Pode ser uma imagem de fundo depois */
     text-align: center;
     padding: 4rem 5% 6rem; /* Ajustar padding para melhor espaçamento vertical */
+    background-image: url('../assets/images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Efeito Parallax para o Hero */
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../assets/images/hero-overlay.png'); /* Imagem de sobreposição para efeito de profundidade */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    z-index: 1;
+    transform: translateZ(-1px) scale(1.1);
+    pointer-events: none;
+}
+
+#hero .container {
+    position: relative;
+    z-index: 2;
 }
 
 #hero h1 {
@@ -181,7 +279,46 @@ main section:nth-child(even) {
 
 #menu h2 {
     text-align: center; /* Centralizar o título principal da seção */
+    margin-bottom: 1.5rem;
+}
+
+/* Filtros do Menu */
+.menu-filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
     margin-bottom: 2.5rem;
+}
+
+.filter-button {
+    padding: 0.5rem 1.2rem;
+    background-color: var(--primary-color);
+    border: 1px solid var(--accent-color-wood);
+    border-radius: 20px;
+    color: var(--accent-color-wood);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color var(--transition-speed) var(--transition-timing),
+                color var(--transition-speed) var(--transition-timing),
+                transform var(--transition-speed) var(--transition-timing);
+}
+
+.filter-button:hover,
+.filter-button:focus {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+    outline: none;
+}
+
+.filter-button.active {
+    background-color: var(--accent-color-wood);
+    color: var(--primary-color);
+}
+
+.filter-button:focus-visible {
+    box-shadow: 0 0 0 3px var(--focus-color);
 }
 
 .menu-container {
@@ -209,6 +346,20 @@ main section:nth-child(even) {
 
 .menu-item {
     margin-bottom: 1.5rem;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform var(--transition-speed) var(--transition-timing),
+                box-shadow var(--transition-speed) var(--transition-timing),
+                background-color var(--transition-speed) var(--transition-timing);
+    cursor: pointer;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    background-color: #fffaf5;
 }
 
 .menu-item:last-child {
@@ -333,6 +484,146 @@ main section:nth-child(even) {
     color: var(--text-color);
     text-align: center;
 }
+
+.google-map {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.google-map:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilos para a seção de contato */
+#contato {
+    background-color: var(--secondary-color);
+    padding: 4rem 5%;
+}
+
+.contato-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-form {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    transition: transform var(--transition-speed) var(--transition-timing);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--focus-color);
+    box-shadow: 0 0 0 2px var(--focus-ring-color);
+}
+
+/* Melhorias de acessibilidade para elementos interativos */
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 2px solid var(--focus-color);
+    outline-offset: 2px;
+}
+
+/* Indicador de foco para elementos interativos */
+.interactive-element {
+    position: relative;
+}
+
+.interactive-element:focus-visible::after {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    border: 2px solid var(--focus-color);
+    border-radius: 4px;
+    pointer-events: none;
+}
+
+.form-group input.error,
+.form-group textarea.error {
+    border-color: var(--error-color);
+}
+
+.error-message {
+    display: block;
+    color: var(--error-color);
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+    height: 1rem;
+}
+
+.submit-button {
+    background-color: var(--accent-color-wood);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-button:hover {
+    background-color: #8a6748;
+    transform: translateY(-2px);
+}
+
+.submit-button:active {
+    transform: translateY(0);
+}
+
+.form-status {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: 600;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-status.sending {
+    background-color: rgba(52, 152, 219, 0.1);
+    color: var(--focus-color);
+}
+
+.form-status.success {
+    background-color: rgba(46, 204, 113, 0.1);
+    color: var(--success-color);
+}
 #sobre {
     background-color: var(--primary-color); /* Mantendo o fundo claro e suave */
 }
@@ -384,6 +675,54 @@ footer {
     padding: 2rem 5%;
     border-top: 1px solid var(--secondary-color);
     font-size: 0.9rem;
+    position: relative; /* Para posicionar o botão de volta ao topo */
+}
+
+/* Botão de Volta ao Topo */
+.scroll-top {
+    position: fixed;
+    bottom: var(--scroll-top-margin);
+    right: var(--scroll-top-margin);
+    width: var(--scroll-top-size);
+    height: var(--scroll-top-size);
+    background-color: var(--accent-color-wood);
+    color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity var(--transition-speed) var(--transition-timing),
+                visibility var(--transition-speed) var(--transition-timing),
+                transform var(--transition-speed) var(--transition-timing),
+                background-color var(--transition-speed) var(--transition-timing);
+    z-index: 999;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.scroll-top:hover,
+.scroll-top:focus {
+    background-color: var(--text-color);
+    outline: none;
+}
+
+.scroll-top:focus-visible {
+    box-shadow: 0 0 0 3px var(--focus-color);
+}
+
+.scroll-top svg {
+    width: 1.2rem;
+    height: 1.2rem;
+    fill: currentColor;
 }
 
 /* Media Queries para Responsividade */
@@ -565,6 +904,17 @@ footer {
     }
     header .logo .logo-svg {
         height: 30px;
+    }
+    
+    /* Ajustes para o botão de volta ao topo em dispositivos móveis */
+    .scroll-top {
+        --scroll-top-size: 2.5rem;
+        --scroll-top-margin: 1rem;
+    }
+    
+    /* Desativar efeito parallax em dispositivos móveis para melhor performance */
+    #hero {
+        background-attachment: scroll;
     }
 
     header nav ul li a {

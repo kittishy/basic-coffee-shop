@@ -40,7 +40,8 @@
 
         <section id="menu" role="region" aria-labelledby="menu-title">
             <h2 id="menu-title">Nosso Menu</h2>
-            <div class="menu-container">
+            <!-- Os filtros do menu serão inseridos aqui via JavaScript -->
+            <div class="menu-container" id="menu-items" role="tabpanel" aria-live="polite">
                 <div class="menu-category">
                     <h3>Cafés Especiais</h3>
                     <div class="menu-item">
@@ -171,7 +172,14 @@
         <!-- Adicionar links para redes sociais futuramente -->
     </footer>
 
-    <!-- Adicionar scripts JS futuramente, se necessário -->
-    <!-- <script src="js/main.js"></script> -->
+    <!-- Botão de volta ao topo será inserido via JavaScript -->
+
+    <!-- Scripts JS -->
+    <script src="js/main.js"></script>
+    
+    <!-- Mensagem de acessibilidade para leitores de tela -->
+    <div class="sr-only" aria-live="polite" id="accessibility-status">
+        Esta página possui recursos de acessibilidade. Use a tecla Tab para navegar entre os elementos interativos.
+    </div>
 </body>
 </html>
