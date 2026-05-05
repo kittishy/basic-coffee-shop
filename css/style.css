@@ -334,6 +334,19 @@ main section:nth-child(even) {
     padding: 1.5rem;
     border-radius: 8px;
     /* box-shadow: 0 4px 12px rgba(0,0,0,0.05); /* Sombra suave opcional */
+    transition: opacity 0.28s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-category.is-hiding {
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+}
+
+.menu-category.is-entering {
+    opacity: 0;
+    transform: translateY(10px);
 }
 
 .menu-category h3 {

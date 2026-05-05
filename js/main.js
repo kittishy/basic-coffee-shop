@@ -209,24 +209,38 @@ function initMenuFilters() {
             filterButtons.forEach(btn => btn.classList.remove('active'));
             // Adicionar classe ativa ao botão clicado
             this.classList.add('active');
-            
+
             const filter = this.getAttribute('data-filter');
-            
+
             menuCategories.forEach(category => {
                 const categoryTitle = category.querySelector('h3');
-                if (filter === 'all' || (categoryTitle && categoryTitle.textContent === filter)) {
+                const shouldShow = filter === 'all' || (categoryTitle && categoryTitle.textContent === filter);
+
+                if (shouldShow) {
+                    // Step 1: make visible but in the "before" state (offscreen/transparent)
                     category.style.display = 'block';
-                    // Animar entrada
-                    setTimeout(() => {
-                        category.style.opacity = '1';
-                        category.style.transform = 'translateY(0)';
-                    }, 50);
+                    category.classList.remove('is-hiding');
+                    category.classList.add('is-entering');
+
+                    // Step 2: force reflow so the browser registers the start state,
+                    // then remove the class to trigger the CSS transition to the resting state
+                    requestAnimationFrame(() => {
+                        requestAnimationFrame(() => {
+                            category.classList.remove('is-entering');
+                        });
+                    });
                 } else {
-                    category.style.opacity = '0';
-                    category.style.transform = 'translateY(20px)';
-                    setTimeout(() => {
-                        category.style.display = 'none';
-                    }, 300);
+                    // Step 1: add the hiding class to trigger CSS transition out
+                    category.classList.add('is-hiding');
+
+                    // Step 2: after the transition completes, remove from layout
+                    const onTransitionEnd = () => {
+                        if (category.classList.contains('is-hiding')) {
+                            category.style.display = 'none';
+                        }
+                        category.removeEventListener('transitionend', onTransitionEnd);
+                    };
+                    category.addEventListener('transitionend', onTransitionEnd);
                 }
             });
         });
