@@ -75,3 +75,19 @@ Este documento registra as sugestões e observações da Ellen para o projeto Li
 
 ---
 *Atualizado em: 25/07/2024 10:30*
+
+## Refatoração completa (2026)
+
+Reescrita integral para elevar a qualidade do projeto, mantendo-o estático e gratuito:
+
+- **Identidade:** novo `favicon.svg` e marca de xícara em SVG (substituem o antigo
+  `favicon.ico` e o `hero-bg.jpg`, que nunca chegaram a existir). Fundo do hero agora é
+  `hero-bg.svg` + gradientes CSS — sem nenhuma requisição quebrada.
+- **Tipografia:** Fraunces (display) + DM Sans (corpo).
+- **Acessibilidade:** skip link, menu hambúrguer real com `aria-expanded`, foco visível,
+  `aria-*` corretos, contraste AA e suporte a `prefers-reduced-motion`.
+- **JS:** reescrito em módulos limpos; corrigidos o botão "voltar ao topo" e o menu mobile,
+  removido código morto (parallax/counters). Mapa carregado sob demanda (lazy).
+- **SEO:** Open Graph, JSON-LD (`CafeOrCoffeeShop`) e `site.webmanifest`.
+
+*Atualizado em: 01/06/2026*

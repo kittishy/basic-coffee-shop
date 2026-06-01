@@ -3,183 +3,368 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Lisa's Café - Um refúgio de sabores e aconchego inspirado na delicadeza coreana.">
-    <meta name="keywords" content="cafeteria, café, bolos, doces, coreano, minimalista, aconchegante">
-    <title>Lisa's Café</title>
+    <meta name="theme-color" content="#B85C38">
+    <meta name="color-scheme" content="light">
+
+    <title>Lisa's Café — Cafés especiais e doces artesanais</title>
+    <meta name="description" content="Lisa's Café: um refúgio de sabores e aconchego inspirado na delicadeza coreana. Cafés especiais, doces artesanais e salgados leves no coração da cidade.">
+    <meta name="keywords" content="cafeteria, café especial, doces artesanais, brunch, coreano, minimalista, aconchegante">
+    <meta name="author" content="Lisa's Café">
+    <link rel="canonical" href="https://lisascafe.example/">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Lisa's Café — Cafés especiais e doces artesanais">
+    <meta property="og:description" content="Um refúgio de sabores e aconchego inspirado na delicadeza coreana.">
+    <meta property="og:image" content="assets/images/favicon.svg">
+    <meta property="og:locale" content="pt_BR">
+    <meta name="twitter:card" content="summary">
+
+    <!-- Icons & Manifest -->
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="assets/images/favicon.svg">
+    <link rel="manifest" href="site.webmanifest">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
-    <!-- <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml"> -->
+
+    <!-- Structured data: ajuda SEO e rich results -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CafeOrCoffeeShop",
+      "name": "Lisa's Café",
+      "description": "Cafés especiais e doces artesanais inspirados na delicadeza coreana.",
+      "servesCuisine": ["Café", "Confeitaria", "Brunch"],
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua das Flores Encantadas, 123",
+        "addressLocality": "Cidade das Maravilhas",
+        "postalCode": "01234-567",
+        "addressCountry": "BR"
+      },
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "19:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday"], "opens": "10:00", "closes": "18:00" }
+      ]
+    }
+    </script>
 </head>
 <body>
-    <header role="banner">
-        <nav role="navigation">
-            <div class="logo">
-                <a href="#" aria-label="Lisa's Café - Página Inicial">
-                    <img src="assets/images/logo.svg" alt="Lisa's Café" class="logo-svg">
-                </a>
-            </div>
-            <ul>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#sobre">Sobre Nós</a></li>
-                <li><a href="#galeria">Galeria</a></li>
-                <li><a href="#localizacao">Localização</a></li>
-            </ul>
-        </nav>
+    <a class="skip-link" href="#main">Pular para o conteúdo</a>
+
+    <header class="site-header" role="banner">
+        <div class="header-inner">
+            <a class="brand" href="#hero" aria-label="Lisa's Café — Página inicial">
+                <svg class="brand-mark" width="40" height="40" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M10 18h24v9a12 12 0 0 1-12 12A12 12 0 0 1 10 27z"/>
+                    <path d="M34 21h4a6 6 0 0 1 0 12h-3.5"/>
+                    <path d="M8 43h28"/>
+                    <g opacity="0.7"><path d="M19 13c-1.8-2-1.8-4 0-6"/><path d="M24 13c-1.8-2-1.8-4 0-6"/><path d="M29 13c-1.8-2-1.8-4 0-6"/></g>
+                </svg>
+                <span class="brand-name">Lisa's Café</span>
+            </a>
+
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Abrir menu de navegação">
+                <span class="nav-toggle-bar" aria-hidden="true"></span>
+                <span class="nav-toggle-bar" aria-hidden="true"></span>
+                <span class="nav-toggle-bar" aria-hidden="true"></span>
+            </button>
+
+            <nav class="primary-nav" id="primary-nav" aria-label="Navegação principal">
+                <ul>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#sobre">Sobre Nós</a></li>
+                    <li><a href="#galeria">Galeria</a></li>
+                    <li><a href="#localizacao">Localização</a></li>
+                    <li><a href="#contato" class="nav-cta">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main role="main">
-        <section id="hero" role="region" aria-labelledby="hero-title">
-            <!-- Conteúdo do Hero Section: Imagem inspiradora, texto de boas-vindas -->
-            <h1 id="hero-title">Bem-vindo ao Lisa's Café</h1>
-            <p>Seu cantinho de paz e sabor.</p>
-            <a href="#menu" class="cta-button">Ver Menu</a>
+    <main id="main" role="main">
+        <!-- ============ HERO ============ -->
+        <section id="hero" class="hero" aria-labelledby="hero-title">
+            <div class="hero-inner">
+                <p class="eyebrow reveal">Cafeteria · Inspiração coreana</p>
+                <h1 id="hero-title" class="reveal">Um cantinho de paz,<br>em cada xícara.</h1>
+                <p class="hero-sub reveal">Cafés especiais e doces artesanais preparados com calma e carinho — para o tempo desacelerar e o sabor falar mais alto.</p>
+                <div class="hero-actions reveal">
+                    <a href="#menu" class="btn btn-primary">Ver o Menu</a>
+                    <a href="#localizacao" class="btn btn-ghost">Como chegar</a>
+                </div>
+            </div>
+            <div class="hero-scroll-hint" aria-hidden="true">
+                <span></span>
+            </div>
         </section>
 
-        <section id="menu" role="region" aria-labelledby="menu-title">
-            <h2 id="menu-title">Nosso Menu</h2>
-            <!-- Os filtros do menu serão inseridos aqui via JavaScript -->
-            <div class="menu-container" id="menu-items" role="tabpanel" aria-live="polite">
-                <div class="menu-category">
-                    <h3>Cafés Especiais</h3>
-                    <div class="menu-item">
-                        <h4>Espresso da Casa</h4>
-                        <p class="menu-item-description">Grãos selecionados, torra média, notas de chocolate.</p>
-                        <p class="menu-item-price">R$ 8,00</p>
-                    </div>
-                    <div class="menu-item">
-                        <h4>Cappuccino Cremoso</h4>
-                        <p class="menu-item-description">Espresso, leite vaporizado e uma pitada de cacau.</p>
-                        <p class="menu-item-price">R$ 12,00</p>
-                    </div>
-                    <div class="menu-item">
-                        <h4>Mocha Delicado</h4>
-                        <p class="menu-item-description">Espresso, chocolate cremoso e leite vaporizado.</p>
-                        <p class="menu-item-price">R$ 14,00</p>
-                    </div>
+        <!-- ============ MENU ============ -->
+        <section id="menu" class="section section-menu" aria-labelledby="menu-title">
+            <div class="container">
+                <p class="section-eyebrow">O que servimos</p>
+                <h2 id="menu-title" class="section-title">Nosso Menu</h2>
+                <p class="section-lead">Ingredientes frescos, torra cuidadosa e receitas que aquecem a alma.</p>
+
+                <div class="menu-filters" role="group" aria-label="Filtrar categorias do menu">
+                    <button type="button" class="filter-button is-active" data-filter="all" aria-pressed="true">Todos</button>
+                    <button type="button" class="filter-button" data-filter="cafes" aria-pressed="false">Cafés</button>
+                    <button type="button" class="filter-button" data-filter="doces" aria-pressed="false">Doces</button>
+                    <button type="button" class="filter-button" data-filter="salgados" aria-pressed="false">Salgados</button>
                 </div>
 
-                <div class="menu-category">
-                    <h3>Doces Artesanais</h3>
-                    <div class="menu-item">
-                        <h4>Bolo de Cenoura com Cobertura</h4>
-                        <p class="menu-item-description">Fofinho, com especiarias e cobertura de cream cheese.</p>
-                        <p class="menu-item-price">R$ 15,00 (fatia)</p>
-                    </div>
-                    <div class="menu-item">
-                        <h4>Cheesecake de Frutas Vermelhas</h4>
-                        <p class="menu-item-description">Base crocante, recheio cremoso e calda artesanal.</p>
-                        <p class="menu-item-price">R$ 18,00 (fatia)</p>
-                    </div>
-                    <div class="menu-item">
-                        <h4>Cookie com Gotas de Chocolate Belga</h4>
-                        <p class="menu-item-description">Crocante por fora, macio por dentro.</p>
-                        <p class="menu-item-price">R$ 9,00</p>
-                    </div>
-                </div>
+                <div class="menu-grid" id="menu-grid" aria-live="polite">
+                    <article class="menu-category" data-category="cafes">
+                        <h3>Cafés Especiais</h3>
+                        <ul class="menu-list">
+                            <li class="menu-item">
+                                <div class="menu-item-head">
+                                    <h4>Espresso da Casa</h4>
+                                    <span class="menu-item-price">R$ 8,00</span>
+                                </div>
+                                <p class="menu-item-desc">Grãos selecionados, torra média, notas de chocolate.</p>
+                            </li>
+                            <li class="menu-item">
+                                <div class="menu-item-head">
+                                    <h4>Cappuccino Cremoso</h4>
+                                    <span class="menu-item-price">R$ 12,00</span>
+                                </div>
+                                <p class="menu-item-desc">Espresso, leite vaporizado e uma pitada de cacau.</p>
+                            </li>
+                            <li class="menu-item">
+                                <div class="menu-item-head">
+                                    <h4>Mocha Delicado</h4>
+                                    <span class="menu-item-price">R$ 14,00</span>
+                                </div>
+                                <p class="menu-item-desc">Espresso, chocolate cremoso e leite vaporizado.</p>
+                            </li>
+                        </ul>
+                    </article>
 
-                <div class="menu-category">
-                    <h3>Salgados Leves</h3>
-                    <div class="menu-item">
-                        <h4>Toast de Abacate</h4>
-                        <p class="menu-item-description">Pão artesanal, abacate fresco, ovo pochê e temperos.</p>
-                        <p class="menu-item-price">R$ 22,00</p>
-                    </div>
-                    <div class="menu-item">
-                        <h4>Quiche de Alho Poró</h4>
-                        <p class="menu-item-description">Massa leve e recheio cremoso.</p>
-                        <p class="menu-item-price">R$ 16,00 (fatia)</p>
-                    </div>
+                    <article class="menu-category" data-category="doces">
+                        <h3>Doces Artesanais</h3>
+                        <ul class="menu-list">
+                            <li class="menu-item">
+                                <div class="menu-item-head">
+                                    <h4>Bolo de Cenoura</h4>
+                                    <span class="menu-item-price">R$ 15,00</span>
+                                </div>
+                                <p class="menu-item-desc">Fofinho, com especiarias e cobertura de cream cheese.</p>
+                            </li>
+                            <li class="menu-item">
+                                <div class="menu-item-head">
+                                    <h4>Cheesecake de Frutas Vermelhas</h4>
+                                    <span class="menu-item-price">R$ 18,00</span>
+                                </div>
+                                <p class="menu-item-desc">Base crocante, recheio cremoso e calda artesanal.</p>
+                            </li>
+                            <li class="menu-item">
+                                <div class="menu-item-head">
+                                    <h4>Cookie de Chocolate Belga</h4>
+                                    <span class="menu-item-price">R$ 9,00</span>
+                                </div>
+                                <p class="menu-item-desc">Crocante por fora, macio por dentro.</p>
+                            </li>
+                        </ul>
+                    </article>
+
+                    <article class="menu-category" data-category="salgados">
+                        <h3>Salgados Leves</h3>
+                        <ul class="menu-list">
+                            <li class="menu-item">
+                                <div class="menu-item-head">
+                                    <h4>Toast de Abacate</h4>
+                                    <span class="menu-item-price">R$ 22,00</span>
+                                </div>
+                                <p class="menu-item-desc">Pão artesanal, abacate fresco, ovo pochê e temperos.</p>
+                            </li>
+                            <li class="menu-item">
+                                <div class="menu-item-head">
+                                    <h4>Quiche de Alho-poró</h4>
+                                    <span class="menu-item-price">R$ 16,00</span>
+                                </div>
+                                <p class="menu-item-desc">Massa leve e recheio cremoso.</p>
+                            </li>
+                        </ul>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <section id="sobre" role="region" aria-labelledby="sobre-title">
-            <h2 id="sobre-title">Sobre Nós</h2>
-            <div class="sobre-container">
+        <!-- ============ SOBRE ============ -->
+        <section id="sobre" class="section section-sobre" aria-labelledby="sobre-title">
+            <div class="container sobre-grid">
                 <div class="sobre-texto">
-                    <h3>Nossa História, Seu Refúgio</h3>
+                    <p class="section-eyebrow">Nossa história</p>
+                    <h2 id="sobre-title" class="section-title">Seu refúgio na cidade</h2>
                     <p>No Lisa's Café, cada detalhe é pensado para criar uma atmosfera de calma e aconchego. Inspirados pela delicadeza das cafeterias coreanas, oferecemos um espaço onde o tempo desacelera e os sabores se destacam.</p>
-                    <p>Nossa paixão é servir cafés especiais e doces artesanais que aquecem a alma, preparados com ingredientes frescos e muito carinho. Queremos que o Lisa's Café seja mais do que uma cafeteria: um lugar para pausas revigorantes, encontros memoráveis e momentos de pura felicidade.</p>
-                    <p>Venha nos visitar e descubra seu novo cantinho preferido na cidade.</p>
+                    <p>Nossa paixão é servir cafés especiais e doces artesanais preparados com ingredientes frescos e muito carinho. Queremos ser mais do que uma cafeteria: um lugar para pausas revigorantes e encontros memoráveis.</p>
+                    <ul class="sobre-highlights">
+                        <li><strong>Torra própria</strong><span>grãos frescos toda semana</span></li>
+                        <li><strong>Feito à mão</strong><span>confeitaria artesanal diária</span></li>
+                        <li><strong>Ambiente calmo</strong><span>pensado para o seu descanso</span></li>
+                    </ul>
                 </div>
-                <div class="sobre-imagem">
-                    <!-- Sugestão Ellen: Adicionar uma imagem aqui que represente o ambiente ou os fundadores -->
-                    <!-- <img src="assets/images/sobre-nos.jpg" alt="Ambiente acolhedor do Lisa's Café"> -->
-                    <div class="image-placeholder" aria-label="Espaço reservado para imagem do ambiente do Lisa's Café">Imagem do Ambiente</div>
-                </div>
-            </div>
-        </section>
-
-        <section id="galeria" role="region" aria-labelledby="galeria-title">
-            <h2 id="galeria-title">Galeria de Momentos</h2>
-            <div class="galeria-container">
-                <div class="galeria-item">
-                    <div class="image-placeholder" aria-label="Espaço reservado para imagem da galeria 1">Imagem 1</div>
-                </div>
-                <div class="galeria-item">
-                    <div class="image-placeholder" aria-label="Espaço reservado para imagem da galeria 2">Imagem 2</div>
-                </div>
-                <div class="galeria-item">
-                    <div class="image-placeholder" aria-label="Espaço reservado para imagem da galeria 3">Imagem 3</div>
-                </div>
-                <div class="galeria-item">
-                    <div class="image-placeholder" aria-label="Espaço reservado para imagem da galeria 4">Imagem 4</div>
-                </div>
-                <div class="galeria-item">
-                    <div class="image-placeholder" aria-label="Espaço reservado para imagem da galeria 5">Imagem 5</div>
-                </div>
-                <div class="galeria-item">
-                    <div class="image-placeholder" aria-label="Espaço reservado para imagem da galeria 6">Imagem 6</div>
-                </div>
-            </div>
-            <p class="galeria-observacao"><em>Imagens meramente ilustrativas. Em breve, fotos reais do nosso café!</em></p>
-        </section>
-
-        <section id="localizacao" role="region" aria-labelledby="localizacao-title">
-            <h2 id="localizacao-title">Onde Nos Encontrar</h2>
-            <div class="localizacao-container">
-                <div class="localizacao-info">
-                    <h3>Visite-nos</h3>
-                    <p>Rua das Flores Encantadas, 123</p>
-                    <p>Bairro Jardim Secreto</p>
-                    <p>Cidade das Maravilhas - UF</p>
-                    <p>CEP: 01234-567</p>
-
-                    <h3>Horário de Funcionamento</h3>
-                    <p>Segunda a Sexta: 9h - 19h</p>
-                    <p>Sábados e Feriados: 10h - 18h</p>
-                    <p>Domingos: Fechado</p>
-
-                    <h3>Contato</h3>
-                    <p>Telefone: (XX) XXXX-XXXX</p>
-                    <p>Email: solara.julia.a@gmail.com</p>
-                </div>
-                <div class="localizacao-mapa">
-                    <!-- Placeholder para o mapa interativo -->
-                    <div class="map-placeholder" aria-label="Espaço reservado para mapa interativo da localização do Lisa's Café">
-                        Mapa Interativo (Google Maps Embed)
+                <div class="sobre-imagem" aria-hidden="true">
+                    <div class="sobre-card">
+                        <svg viewBox="0 0 48 48" width="64" height="64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M10 20h24v8a12 12 0 0 1-12 12A12 12 0 0 1 10 28z"/>
+                            <path d="M34 23h4a6 6 0 0 1 0 12h-3"/>
+                            <path d="M18 14c-1.6-1.8-1.6-3.6 0-5.4M24 14c-1.6-1.8-1.6-3.6 0-5.4M30 14c-1.6-1.8-1.6-3.6 0-5.4"/>
+                        </svg>
+                        <p>“Café é uma pausa que a gente merece.”</p>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- ============ GALERIA ============ -->
+        <section id="galeria" class="section section-galeria" aria-labelledby="galeria-title">
+            <div class="container">
+                <p class="section-eyebrow">Momentos</p>
+                <h2 id="galeria-title" class="section-title">Galeria</h2>
+                <p class="section-lead">Um gostinho do nosso cantinho. <em>Imagens ilustrativas — em breve, fotos reais!</em></p>
+
+                <ul class="galeria-grid">
+                    <li class="galeria-item" data-hue="0">
+                        <span class="galeria-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 13h16v6a8 8 0 0 1-8 8 8 8 0 0 1-8-8z"/><path d="M22 15h3a4 4 0 0 1 0 8h-2"/><path d="M11 9c-1-1.2-1-2.4 0-3.6M16 9c-1-1.2-1-2.4 0-3.6"/></svg></span>
+                        <span class="galeria-label">Latte da manhã</span>
+                    </li>
+                    <li class="galeria-item" data-hue="1">
+                        <span class="galeria-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 26h22M7 26v-8h18v8M9 18c0-3 2-4 4-4M16 18c0-4 2-5 4-5"/><path d="M7 18a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3"/></svg></span>
+                        <span class="galeria-label">Bolos do dia</span>
+                    </li>
+                    <li class="galeria-item" data-hue="2">
+                        <span class="galeria-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 27C9 22 5 18 5 13a5 5 0 0 1 11-2 5 5 0 0 1 11 2c0 5-4 9-11 14z"/></svg></span>
+                        <span class="galeria-label">Cantinho querido</span>
+                    </li>
+                    <li class="galeria-item" data-hue="3">
+                        <span class="galeria-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h13a4 4 0 0 1 4 4v14H10a4 4 0 0 1-4-4z"/><path d="M19 8a4 4 0 0 1 4 4"/><path d="M10 13h8M10 17h8"/></svg></span>
+                        <span class="galeria-label">Pausa para ler</span>
+                    </li>
+                    <li class="galeria-item" data-hue="4">
+                        <span class="galeria-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4c4 4 4 7 0 10M9 27l1.5-9h11L23 27z"/><path d="M9 27h14"/></svg></span>
+                        <span class="galeria-label">Doces quentinhos</span>
+                    </li>
+                    <li class="galeria-item" data-hue="5">
+                        <span class="galeria-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 6a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/><path d="M16 11v5l3 2"/></svg></span>
+                        <span class="galeria-label">Hora do café</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ============ LOCALIZAÇÃO ============ -->
+        <section id="localizacao" class="section section-local" aria-labelledby="local-title">
+            <div class="container local-grid">
+                <div class="local-info">
+                    <p class="section-eyebrow">Visite-nos</p>
+                    <h2 id="local-title" class="section-title">Onde nos encontrar</h2>
+
+                    <dl class="local-details">
+                        <div>
+                            <dt>Endereço</dt>
+                            <dd>Rua das Flores Encantadas, 123<br>Bairro Jardim Secreto<br>Cidade das Maravilhas — CEP 01234-567</dd>
+                        </div>
+                        <div>
+                            <dt>Horário</dt>
+                            <dd>Seg a Sex: 9h – 19h<br>Sáb e feriados: 10h – 18h<br>Domingos: fechado</dd>
+                        </div>
+                        <div>
+                            <dt>Contato</dt>
+                            <dd><a href="mailto:solara.julia.a@gmail.com">solara.julia.a@gmail.com</a><br><a href="tel:+550000000000">(XX) XXXX-XXXX</a></dd>
+                        </div>
+                    </dl>
+                </div>
+
+                <div class="local-mapa">
+                    <div class="map-frame" id="map-frame"
+                         data-map="https://www.google.com/maps?q=-22.906392,-43.180586&output=embed">
+                        <button type="button" class="map-load" aria-label="Carregar mapa interativo">
+                            <span aria-hidden="true">📍</span>
+                            <span>Toque para carregar o mapa</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ CONTATO ============ -->
+        <section id="contato" class="section section-contato" aria-labelledby="contato-title">
+            <div class="container contato-inner">
+                <p class="section-eyebrow">Fale com a gente</p>
+                <h2 id="contato-title" class="section-title">Entre em contato</h2>
+                <p class="section-lead">Dúvidas, reservas ou só um oi — adoramos receber mensagens.</p>
+
+                <form class="contact-form" id="contact-form" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Nome</label>
+                            <input type="text" id="name" name="name" autocomplete="name" required aria-describedby="name-error">
+                            <span class="error-message" id="name-error" role="alert"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" autocomplete="email" required aria-describedby="email-error">
+                            <span class="error-message" id="email-error" role="alert"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Assunto</label>
+                        <input type="text" id="subject" name="subject" required aria-describedby="subject-error">
+                        <span class="error-message" id="subject-error" role="alert"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensagem</label>
+                        <textarea id="message" name="message" rows="5" required aria-describedby="message-error"></textarea>
+                        <span class="error-message" id="message-error" role="alert"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary submit-button">Enviar mensagem</button>
+                    <p class="form-status" role="status" aria-live="polite"></p>
+                </form>
             </div>
         </section>
     </main>
 
-    <footer role="contentinfo">
-        <p>&copy; 2025 Lisa's Café. Todos os direitos reservados.</p>
-        <!-- Adicionar links para redes sociais futuramente -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <svg width="36" height="36" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M10 18h24v9a12 12 0 0 1-12 12A12 12 0 0 1 10 27z"/>
+                    <path d="M34 21h4a6 6 0 0 1 0 12h-3.5"/>
+                    <path d="M8 43h28"/>
+                </svg>
+                <span>Lisa's Café</span>
+                <p>Seu cantinho de paz e sabor.</p>
+            </div>
+            <nav class="footer-nav" aria-label="Rodapé">
+                <a href="#menu">Menu</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#galeria">Galeria</a>
+                <a href="#contato">Contato</a>
+            </nav>
+            <div class="footer-social">
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram do Lisa's Café">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+                </a>
+                <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp do Lisa's Café">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l1.6-4.4A8 8 0 1 1 8 19.4z"/><path d="M9 9c.5 3 3 5.5 6 6l1.5-2-2.5-1-1 1c-1-.5-2-1.5-2.5-2.5l1-1-1-2.5z"/></svg>
+                </a>
+            </div>
+        </div>
+        <p class="footer-copy">&copy; <span id="year">2026</span> Lisa's Café. Feito com carinho.</p>
     </footer>
 
-    <!-- Botão de volta ao topo será inserido via JavaScript -->
+    <button class="scroll-top" type="button" aria-label="Voltar ao topo">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5l-7 7h4v7h6v-7h4z"/></svg>
+    </button>
 
-    <!-- Scripts JS -->
-    <script src="js/main.js"></script>
-    
-    <!-- Mensagem de acessibilidade para leitores de tela -->
-    <div class="sr-only" aria-live="polite" id="accessibility-status">
-        Esta página possui recursos de acessibilidade. Use a tecla Tab para navegar entre os elementos interativos.
-    </div>
+    <script src="js/main.js" defer></script>
 </body>
 </html>
