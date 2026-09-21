@@ -1,370 +1,294 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!doctype html>
+<html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#B85C38">
-    <meta name="color-scheme" content="light">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#24372d">
+  <meta name="color-scheme" content="light">
+  <meta name="robots" content="noindex, nofollow">
 
-    <title>Lisa's Café — Cafés especiais e doces artesanais</title>
-    <meta name="description" content="Lisa's Café: um refúgio de sabores e aconchego inspirado na delicadeza coreana. Cafés especiais, doces artesanais e salgados leves no coração da cidade.">
-    <meta name="keywords" content="cafeteria, café especial, doces artesanais, brunch, coreano, minimalista, aconchegante">
-    <meta name="author" content="Lisa's Café">
-    <link rel="canonical" href="https://lisascafe.example/">
+  <title>Basic Coffee — Bagels, Brunch & Coffee in Marburg</title>
+  <meta name="description" content="Basic Coffee Bagels & Sweets in Marburg: frisch gemahlener Kaffee, Bagels, Bowls, Smoothies, Muffins und Kuchen — seit 2009 am Hauptbahnhof.">
+  <meta name="author" content="Basic Coffee Redesign Concept">
 
-    <!-- Open Graph / Social -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Lisa's Café — Cafés especiais e doces artesanais">
-    <meta property="og:description" content="Um refúgio de sabores e aconchego inspirado na delicadeza coreana.">
-    <meta property="og:image" content="assets/images/favicon.svg">
-    <meta property="og:locale" content="pt_BR">
-    <meta name="twitter:card" content="summary">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:title" content="Basic Coffee — Bagels, Brunch & Coffee in Marburg">
+  <meta property="og:description" content="Kaffee, Bagels, Bowls, Smoothies und süße Lieblingsstücke direkt am Marburger Hauptbahnhof.">
+  <meta property="og:image" content="assets/images/basic-hero.webp">
+  <meta name="twitter:card" content="summary_large_image">
 
-    <!-- Icons & Manifest -->
-    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="assets/images/favicon.svg">
-    <link rel="manifest" href="site.webmanifest">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="site.webmanifest">
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 
-    <link rel="stylesheet" href="css/style.css">
-
-    <!-- Structured data: ajuda SEO e rich results -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "CafeOrCoffeeShop",
-      "name": "Lisa's Café",
-      "description": "Cafés especiais e doces artesanais inspirados na delicadeza coreana.",
-      "servesCuisine": ["Café", "Confeitaria", "Brunch"],
-      "priceRange": "$$",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Rua das Flores Encantadas, 123",
-        "addressLocality": "Cidade das Maravilhas",
-        "postalCode": "01234-567",
-        "addressCountry": "BR"
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CafeOrCoffeeShop",
+    "name": "Basic Coffee Bagels & Sweets",
+    "description": "Coffee Shop mit Kaffee, Bagels, Bowls, Smoothies, Muffins und Kuchen in Marburg.",
+    "telephone": "+49 6421 8856817",
+    "email": "info@basic-coffee.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Bahnhofstraße 38",
+      "postalCode": "35037",
+      "addressLocality": "Marburg",
+      "addressCountry": "DE"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "07:00",
+        "closes": "19:00"
       },
-      "openingHoursSpecification": [
-        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "19:00" },
-        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday"], "opens": "10:00", "closes": "18:00" }
-      ]
-    }
-    </script>
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Sunday",
+        "opens": "08:00",
+        "closes": "19:00"
+      }
+    ],
+    "sameAs": ["https://www.basiccoffee-kitchen-bar.com/"]
+  }
+  </script>
 </head>
 <body>
-    <a class="skip-link" href="#main">Pular para o conteúdo</a>
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
 
-    <header class="site-header" role="banner">
-        <div class="header-inner">
-            <a class="brand" href="#hero" aria-label="Lisa's Café — Página inicial">
-                <svg class="brand-mark" width="40" height="40" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <path d="M10 18h24v9a12 12 0 0 1-12 12A12 12 0 0 1 10 27z"/>
-                    <path d="M34 21h4a6 6 0 0 1 0 12h-3.5"/>
-                    <path d="M8 43h28"/>
-                    <g opacity="0.7"><path d="M19 13c-1.8-2-1.8-4 0-6"/><path d="M24 13c-1.8-2-1.8-4 0-6"/><path d="M29 13c-1.8-2-1.8-4 0-6"/></g>
-                </svg>
-                <span class="brand-name">Lisa's Café</span>
-            </a>
+  <div class="announcement">
+    <div class="shell announcement-inner">
+      <span>Marburg · Bahnhofstraße 38</span>
+      <span class="announcement-hours">Mo–Sa 7–19 Uhr · So 8–19 Uhr</span>
+    </div>
+  </div>
 
-            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Abrir menu de navegação">
-                <span class="nav-toggle-bar" aria-hidden="true"></span>
-                <span class="nav-toggle-bar" aria-hidden="true"></span>
-                <span class="nav-toggle-bar" aria-hidden="true"></span>
-            </button>
+  <header class="site-header" id="top">
+    <div class="shell header-inner">
+      <a class="brand" href="#hero" aria-label="Basic Coffee — Startseite">
+        <span class="brand-dot" aria-hidden="true"></span>
+        <span class="brand-copy"><strong>basic</strong><span>coffee</span></span>
+      </a>
 
-            <nav class="primary-nav" id="primary-nav" aria-label="Navegação principal">
-                <ul>
-                    <li><a href="#menu">Menu</a></li>
-                    <li><a href="#sobre">Sobre Nós</a></li>
-                    <li><a href="#galeria">Galeria</a></li>
-                    <li><a href="#localizacao">Localização</a></li>
-                    <li><a href="#contato" class="nav-cta">Contato</a></li>
-                </ul>
-            </nav>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Menü öffnen">
+        <span></span><span></span>
+      </button>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="Hauptnavigation">
+        <a href="#angebot">Angebot</a>
+        <a href="#story">Story</a>
+        <a href="#besuch">Besuch</a>
+        <a href="#family">Basic Family</a>
+      </nav>
+
+      <a class="button button-small header-cta" href="https://www.ubereats.com/de/store/basic-coffee-bagels-%26-sweets/00MKKyeWXCWRomHku4YHHw" target="_blank" rel="noopener noreferrer">Online bestellen</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+      <img class="hero-image" src="assets/images/basic-hero.webp" width="800" height="450" alt="Illustrative, sonnige Coffee-Shop-Atmosphäre mit Theke und Barista" fetchpriority="high">
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="shell hero-inner">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Basic Coffee · Marburg · seit 2009</p>
+          <h1 id="hero-title">Einfach gut.<br><em>Jeden Tag.</em></h1>
+          <p class="hero-lead">Frisch gemahlener Kaffee, Bagels, Bowls, Smoothies und süße Lieblingsstücke — direkt am Marburger Hauptbahnhof.</p>
+          <div class="hero-actions">
+            <a class="button button-light" href="https://www.ubereats.com/de/store/basic-coffee-bagels-%26-sweets/00MKKyeWXCWRomHku4YHHw" target="_blank" rel="noopener noreferrer">Jetzt bestellen <span aria-hidden="true">↗</span></a>
+            <a class="text-button" href="#besuch">Uns besuchen <span aria-hidden="true">↓</span></a>
+          </div>
         </div>
-    </header>
 
-    <main id="main" role="main">
-        <!-- ============ HERO ============ -->
-        <section id="hero" class="hero" aria-labelledby="hero-title">
-            <div class="hero-inner">
-                <p class="eyebrow reveal">Cafeteria · Inspiração coreana</p>
-                <h1 id="hero-title" class="reveal">Um cantinho de paz,<br>em cada xícara.</h1>
-                <p class="hero-sub reveal">Cafés especiais e doces artesanais preparados com calma e carinho — para o tempo desacelerar e o sabor falar mais alto.</p>
-                <div class="hero-actions reveal">
-                    <a href="#menu" class="btn btn-primary">Ver o Menu</a>
-                    <a href="#localizacao" class="btn btn-ghost">Como chegar</a>
-                </div>
-            </div>
-            <div class="hero-scroll-hint" aria-hidden="true">
-                <span></span>
-            </div>
-        </section>
-
-        <!-- ============ MENU ============ -->
-        <section id="menu" class="section section-menu" aria-labelledby="menu-title">
-            <div class="container">
-                <p class="section-eyebrow">O que servimos</p>
-                <h2 id="menu-title" class="section-title">Nosso Menu</h2>
-                <p class="section-lead">Ingredientes frescos, torra cuidadosa e receitas que aquecem a alma.</p>
-
-                <div class="menu-filters" role="group" aria-label="Filtrar categorias do menu">
-                    <button type="button" class="filter-button is-active" data-filter="all" aria-pressed="true">Todos</button>
-                    <button type="button" class="filter-button" data-filter="cafes" aria-pressed="false">Cafés</button>
-                    <button type="button" class="filter-button" data-filter="doces" aria-pressed="false">Doces</button>
-                    <button type="button" class="filter-button" data-filter="salgados" aria-pressed="false">Salgados</button>
-                </div>
-
-                <div class="menu-grid" id="menu-grid" aria-live="polite">
-                    <article class="menu-category" data-category="cafes">
-                        <h3>Cafés Especiais</h3>
-                        <ul class="menu-list">
-                            <li class="menu-item">
-                                <div class="menu-item-head">
-                                    <h4>Espresso da Casa</h4>
-                                    <span class="menu-item-price">R$ 8,00</span>
-                                </div>
-                                <p class="menu-item-desc">Grãos selecionados, torra média, notas de chocolate.</p>
-                            </li>
-                            <li class="menu-item">
-                                <div class="menu-item-head">
-                                    <h4>Cappuccino Cremoso</h4>
-                                    <span class="menu-item-price">R$ 12,00</span>
-                                </div>
-                                <p class="menu-item-desc">Espresso, leite vaporizado e uma pitada de cacau.</p>
-                            </li>
-                            <li class="menu-item">
-                                <div class="menu-item-head">
-                                    <h4>Mocha Delicado</h4>
-                                    <span class="menu-item-price">R$ 14,00</span>
-                                </div>
-                                <p class="menu-item-desc">Espresso, chocolate cremoso e leite vaporizado.</p>
-                            </li>
-                        </ul>
-                    </article>
-
-                    <article class="menu-category" data-category="doces">
-                        <h3>Doces Artesanais</h3>
-                        <ul class="menu-list">
-                            <li class="menu-item">
-                                <div class="menu-item-head">
-                                    <h4>Bolo de Cenoura</h4>
-                                    <span class="menu-item-price">R$ 15,00</span>
-                                </div>
-                                <p class="menu-item-desc">Fofinho, com especiarias e cobertura de cream cheese.</p>
-                            </li>
-                            <li class="menu-item">
-                                <div class="menu-item-head">
-                                    <h4>Cheesecake de Frutas Vermelhas</h4>
-                                    <span class="menu-item-price">R$ 18,00</span>
-                                </div>
-                                <p class="menu-item-desc">Base crocante, recheio cremoso e calda artesanal.</p>
-                            </li>
-                            <li class="menu-item">
-                                <div class="menu-item-head">
-                                    <h4>Cookie de Chocolate Belga</h4>
-                                    <span class="menu-item-price">R$ 9,00</span>
-                                </div>
-                                <p class="menu-item-desc">Crocante por fora, macio por dentro.</p>
-                            </li>
-                        </ul>
-                    </article>
-
-                    <article class="menu-category" data-category="salgados">
-                        <h3>Salgados Leves</h3>
-                        <ul class="menu-list">
-                            <li class="menu-item">
-                                <div class="menu-item-head">
-                                    <h4>Toast de Abacate</h4>
-                                    <span class="menu-item-price">R$ 22,00</span>
-                                </div>
-                                <p class="menu-item-desc">Pão artesanal, abacate fresco, ovo pochê e temperos.</p>
-                            </li>
-                            <li class="menu-item">
-                                <div class="menu-item-head">
-                                    <h4>Quiche de Alho-poró</h4>
-                                    <span class="menu-item-price">R$ 16,00</span>
-                                </div>
-                                <p class="menu-item-desc">Massa leve e recheio cremoso.</p>
-                            </li>
-                        </ul>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- ============ SOBRE ============ -->
-        <section id="sobre" class="section section-sobre" aria-labelledby="sobre-title">
-            <div class="container sobre-grid">
-                <div class="sobre-texto">
-                    <p class="section-eyebrow">Nossa história</p>
-                    <h2 id="sobre-title" class="section-title">Seu refúgio na cidade</h2>
-                    <p>No Lisa's Café, cada detalhe é pensado para criar uma atmosfera de calma e aconchego. Inspirados pela delicadeza das cafeterias coreanas, oferecemos um espaço onde o tempo desacelera e os sabores se destacam.</p>
-                    <p>Nossa paixão é servir cafés especiais e doces artesanais preparados com ingredientes frescos e muito carinho. Queremos ser mais do que uma cafeteria: um lugar para pausas revigorantes e encontros memoráveis.</p>
-                    <ul class="sobre-highlights">
-                        <li><strong>Torra própria</strong><span>grãos frescos toda semana</span></li>
-                        <li><strong>Feito à mão</strong><span>confeitaria artesanal diária</span></li>
-                        <li><strong>Ambiente calmo</strong><span>pensado para o seu descanso</span></li>
-                    </ul>
-                </div>
-                <div class="sobre-imagem" aria-hidden="true">
-                    <div class="sobre-card">
-                        <svg viewBox="0 0 48 48" width="64" height="64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M10 20h24v8a12 12 0 0 1-12 12A12 12 0 0 1 10 28z"/>
-                            <path d="M34 23h4a6 6 0 0 1 0 12h-3"/>
-                            <path d="M18 14c-1.6-1.8-1.6-3.6 0-5.4M24 14c-1.6-1.8-1.6-3.6 0-5.4M30 14c-1.6-1.8-1.6-3.6 0-5.4"/>
-                        </svg>
-                        <p>“Café é uma pausa que a gente merece.”</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ============ GALERIA ============ -->
-        <section id="galeria" class="section section-galeria" aria-labelledby="galeria-title">
-            <div class="container">
-                <p class="section-eyebrow">Momentos</p>
-                <h2 id="galeria-title" class="section-title">Galeria</h2>
-                <p class="section-lead">Um gostinho do nosso cantinho. <em>Imagens ilustrativas — em breve, fotos reais!</em></p>
-
-                <ul class="galeria-grid">
-                    <li class="galeria-item" data-hue="0">
-                        <span class="galeria-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 13h16v6a8 8 0 0 1-8 8 8 8 0 0 1-8-8z"/><path d="M22 15h3a4 4 0 0 1 0 8h-2"/><path d="M11 9c-1-1.2-1-2.4 0-3.6M16 9c-1-1.2-1-2.4 0-3.6"/></svg></span>
-                        <span class="galeria-label">Latte da manhã</span>
-                    </li>
-                    <li class="galeria-item" data-hue="1">
-                        <span class="galeria-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 26h22M7 26v-8h18v8M9 18c0-3 2-4 4-4M16 18c0-4 2-5 4-5"/><path d="M7 18a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3"/></svg></span>
-                        <span class="galeria-label">Bolos do dia</span>
-                    </li>
-                    <li class="galeria-item" data-hue="2">
-                        <span class="galeria-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 27C9 22 5 18 5 13a5 5 0 0 1 11-2 5 5 0 0 1 11 2c0 5-4 9-11 14z"/></svg></span>
-                        <span class="galeria-label">Cantinho querido</span>
-                    </li>
-                    <li class="galeria-item" data-hue="3">
-                        <span class="galeria-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h13a4 4 0 0 1 4 4v14H10a4 4 0 0 1-4-4z"/><path d="M19 8a4 4 0 0 1 4 4"/><path d="M10 13h8M10 17h8"/></svg></span>
-                        <span class="galeria-label">Pausa para ler</span>
-                    </li>
-                    <li class="galeria-item" data-hue="4">
-                        <span class="galeria-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4c4 4 4 7 0 10M9 27l1.5-9h11L23 27z"/><path d="M9 27h14"/></svg></span>
-                        <span class="galeria-label">Doces quentinhos</span>
-                    </li>
-                    <li class="galeria-item" data-hue="5">
-                        <span class="galeria-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 6a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/><path d="M16 11v5l3 2"/></svg></span>
-                        <span class="galeria-label">Hora do café</span>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- ============ LOCALIZAÇÃO ============ -->
-        <section id="localizacao" class="section section-local" aria-labelledby="local-title">
-            <div class="container local-grid">
-                <div class="local-info">
-                    <p class="section-eyebrow">Visite-nos</p>
-                    <h2 id="local-title" class="section-title">Onde nos encontrar</h2>
-
-                    <dl class="local-details">
-                        <div>
-                            <dt>Endereço</dt>
-                            <dd>Rua das Flores Encantadas, 123<br>Bairro Jardim Secreto<br>Cidade das Maravilhas — CEP 01234-567</dd>
-                        </div>
-                        <div>
-                            <dt>Horário</dt>
-                            <dd>Seg a Sex: 9h – 19h<br>Sáb e feriados: 10h – 18h<br>Domingos: fechado</dd>
-                        </div>
-                        <div>
-                            <dt>Contato</dt>
-                            <dd><a href="mailto:solara.julia.a@gmail.com">solara.julia.a@gmail.com</a><br><a href="tel:+550000000000">(XX) XXXX-XXXX</a></dd>
-                        </div>
-                    </dl>
-                </div>
-
-                <div class="local-mapa">
-                    <div class="map-frame" id="map-frame"
-                         data-map="https://www.google.com/maps?q=-22.906392,-43.180586&output=embed">
-                        <button type="button" class="map-load" aria-label="Carregar mapa interativo">
-                            <span aria-hidden="true">📍</span>
-                            <span>Toque para carregar o mapa</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ============ CONTATO ============ -->
-        <section id="contato" class="section section-contato" aria-labelledby="contato-title">
-            <div class="container contato-inner">
-                <p class="section-eyebrow">Fale com a gente</p>
-                <h2 id="contato-title" class="section-title">Entre em contato</h2>
-                <p class="section-lead">Dúvidas, reservas ou só um oi — adoramos receber mensagens.</p>
-
-                <form class="contact-form" id="contact-form" novalidate>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="name">Nome</label>
-                            <input type="text" id="name" name="name" autocomplete="name" required aria-describedby="name-error">
-                            <span class="error-message" id="name-error" role="alert"></span>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" autocomplete="email" required aria-describedby="email-error">
-                            <span class="error-message" id="email-error" role="alert"></span>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="subject">Assunto</label>
-                        <input type="text" id="subject" name="subject" required aria-describedby="subject-error">
-                        <span class="error-message" id="subject-error" role="alert"></span>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Mensagem</label>
-                        <textarea id="message" name="message" rows="5" required aria-describedby="message-error"></textarea>
-                        <span class="error-message" id="message-error" role="alert"></span>
-                    </div>
-                    <button type="submit" class="btn btn-primary submit-button">Enviar mensagem</button>
-                    <p class="form-status" role="status" aria-live="polite"></p>
-                </form>
-            </div>
-        </section>
-    </main>
-
-    <footer class="site-footer" role="contentinfo">
-        <div class="container footer-inner">
-            <div class="footer-brand">
-                <svg width="36" height="36" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <path d="M10 18h24v9a12 12 0 0 1-12 12A12 12 0 0 1 10 27z"/>
-                    <path d="M34 21h4a6 6 0 0 1 0 12h-3.5"/>
-                    <path d="M8 43h28"/>
-                </svg>
-                <span>Lisa's Café</span>
-                <p>Seu cantinho de paz e sabor.</p>
-            </div>
-            <nav class="footer-nav" aria-label="Rodapé">
-                <a href="#menu">Menu</a>
-                <a href="#sobre">Sobre</a>
-                <a href="#galeria">Galeria</a>
-                <a href="#contato">Contato</a>
-            </nav>
-            <div class="footer-social">
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram do Lisa's Café">
-                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-                </a>
-                <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp do Lisa's Café">
-                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l1.6-4.4A8 8 0 1 1 8 19.4z"/><path d="M9 9c.5 3 3 5.5 6 6l1.5-2-2.5-1-1 1c-1-.5-2-1.5-2.5-2.5l1-1-1-2.5z"/></svg>
-                </a>
-            </div>
+        <div class="hero-facts" aria-label="Basic Coffee auf einen Blick">
+          <div><strong>2009</strong><span>erster Shop in Marburg</span></div>
+          <div><strong>Bio & fair</strong><span>Kaffee aus eigener Rösterei</span></div>
+          <div><strong>120</strong><span>Terrassenplätze</span></div>
         </div>
-        <p class="footer-copy">&copy; <span id="year">2026</span> Lisa's Café. Feito com carinho.</p>
-    </footer>
+      </div>
+    </section>
 
-    <button class="scroll-top" type="button" aria-label="Voltar ao topo">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5l-7 7h4v7h6v-7h4z"/></svg>
-    </button>
+    <section class="marquee" aria-label="Sortiment">
+      <div class="marquee-track">
+        <span>Coffee</span><i>●</i><span>Bagels</span><i>●</i><span>Bowls</span><i>●</i><span>Smoothies</span><i>●</i><span>Sweet things</span><i>●</i>
+        <span aria-hidden="true">Coffee</span><i aria-hidden="true">●</i><span aria-hidden="true">Bagels</span><i aria-hidden="true">●</i><span aria-hidden="true">Bowls</span><i aria-hidden="true">●</i><span aria-hidden="true">Smoothies</span><i aria-hidden="true">●</i><span aria-hidden="true">Sweet things</span><i aria-hidden="true">●</i>
+      </div>
+    </section>
 
-    <script src="js/main.js" defer></script>
+    <section class="section offer" id="angebot" aria-labelledby="offer-title">
+      <div class="shell">
+        <div class="section-head reveal">
+          <div>
+            <p class="eyebrow dark">Was darf's sein?</p>
+            <h2 id="offer-title">Basics, die nie<br><em>basic schmecken.</em></h2>
+          </div>
+          <p>Von der ersten Tasse am Morgen bis zum schnellen Lunch: unkompliziert, frisch und mit genug Auswahl für jeden Lieblingsmoment.</p>
+        </div>
+
+        <div class="offer-grid">
+          <article class="offer-card reveal">
+            <span class="offer-number">01</span>
+            <div>
+              <h3>Coffee & Drinks</h3>
+              <p>Frisch gemahlener Kaffee, Espresso-Klassiker, kalte Drinks und mehr.</p>
+            </div>
+            <span class="offer-arrow" aria-hidden="true">↗</span>
+          </article>
+          <article class="offer-card reveal">
+            <span class="offer-number">02</span>
+            <div>
+              <h3>Bagels & Brunch</h3>
+              <p>Belegte Bagels und herzhafte Optionen für Frühstück, Snack oder Lunch.</p>
+            </div>
+            <span class="offer-arrow" aria-hidden="true">↗</span>
+          </article>
+          <article class="offer-card reveal">
+            <span class="offer-number">03</span>
+            <div>
+              <h3>Bowls & Smoothies</h3>
+              <p>Frische Bowls und Smoothies für Tage, an denen es etwas leichter sein darf.</p>
+            </div>
+            <span class="offer-arrow" aria-hidden="true">↗</span>
+          </article>
+          <article class="offer-card reveal">
+            <span class="offer-number">04</span>
+            <div>
+              <h3>Sweet things</h3>
+              <p>Muffins, Kuchen und kleine süße Pausen, die perfekt zum Kaffee passen.</p>
+            </div>
+            <span class="offer-arrow" aria-hidden="true">↗</span>
+          </article>
+        </div>
+
+        <div class="offer-footer reveal">
+          <p>Aktuelle Auswahl und Verfügbarkeit findest du online.</p>
+          <a class="underlined-link" href="https://www.ubereats.com/de/store/basic-coffee-bagels-%26-sweets/00MKKyeWXCWRomHku4YHHw" target="_blank" rel="noopener noreferrer">Zur aktuellen Auswahl <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="story" id="story" aria-labelledby="story-title">
+      <div class="shell story-grid">
+        <div class="story-image-wrap reveal">
+          <img src="assets/images/basic-brunch.webp" width="320" height="240" loading="lazy" alt="Illustrative Auswahl aus Kaffee, Bagel und Gebäck auf einem Holztisch">
+          <p class="image-note">Illustrative Bildwelt</p>
+        </div>
+
+        <div class="story-copy reveal">
+          <p class="eyebrow">Unsere Geschichte</p>
+          <h2 id="story-title">Aus einer Weltreise<br>wurde ein <em>Treffpunkt.</em></h2>
+          <p>Die Idee für Basic Coffee entstand nach einer Weltreise. 2009 öffnete der erste Shop gegenüber dem Marburger Hauptbahnhof — als Coffee-Shop mit internationalem Blick und einem ganz einfachen Anspruch: gute Basics spannend machen.</p>
+          <p>Heute gehören auch Basic Kitchen Bowls und das Basic Kitchen Coffee Bar zur Familie. Was geblieben ist: Qualität, Erfindergeist und ein Ort, an dem man gern noch ein bisschen länger sitzt.</p>
+          <a class="button button-dark" href="https://www.basiccoffee-kitchen-bar.com/" target="_blank" rel="noopener noreferrer">Mehr über Basic <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="manifesto" aria-labelledby="manifesto-title">
+      <div class="shell manifesto-inner">
+        <p class="eyebrow light">Unser Ding</p>
+        <h2 id="manifesto-title" class="reveal">Simple kann<br><em>besonders sein.</em></h2>
+        <div class="manifesto-grid">
+          <p class="reveal">Klassisch und modern. Schnell und gemütlich. Vertraut und trotzdem mit einer kleinen Überraschung.</p>
+          <p class="manifesto-quote reveal">“Ein Ambiente, in dem du dich wohlfühlst und neue Energie tanken kannst.”</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section visit" id="besuch" aria-labelledby="visit-title">
+      <div class="shell">
+        <div class="section-head visit-head reveal">
+          <div>
+            <p class="eyebrow dark">Komm vorbei</p>
+            <h2 id="visit-title">Deine Pause<br><em>in Marburg.</em></h2>
+          </div>
+          <p>Direkt am Hauptbahnhof, mit Innenbereich und großer Außenterrasse.</p>
+        </div>
+
+        <div class="visit-grid">
+          <article class="visit-card reveal">
+            <span class="visit-label">Adresse</span>
+            <h3>Bahnhofstraße 38<br>35037 Marburg</h3>
+            <a class="underlined-link" href="https://www.google.com/maps/search/?api=1&query=Bahnhofstra%C3%9Fe+38%2C+35037+Marburg" target="_blank" rel="noopener noreferrer">Route öffnen <span aria-hidden="true">↗</span></a>
+          </article>
+
+          <article class="visit-card reveal">
+            <span class="visit-label">Öffnungszeiten</span>
+            <dl class="hours">
+              <div><dt>Mo – Sa</dt><dd>07:00 – 19:00</dd></div>
+              <div><dt>Sonntag</dt><dd>08:00 – 19:00</dd></div>
+            </dl>
+          </article>
+
+          <article class="visit-card contact-card reveal">
+            <span class="visit-label">Kontakt</span>
+            <a href="tel:+4964218856817">06421 8856817</a>
+            <a href="mailto:info@basic-coffee.com">info@basic-coffee.com</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="family" id="family" aria-labelledby="family-title">
+      <div class="shell">
+        <div class="family-head reveal">
+          <p class="eyebrow light">Basic Family</p>
+          <h2 id="family-title">Drei Spots.<br><em>Ein Gefühl.</em></h2>
+        </div>
+
+        <div class="family-list">
+          <a class="family-row reveal" href="#besuch">
+            <span>01</span>
+            <div><strong>Basic Coffee Bagels & Sweets</strong><small>Bahnhofstraße 38 · Marburg</small></div>
+            <b aria-hidden="true">↘</b>
+          </a>
+          <a class="family-row reveal" href="https://www.basiccoffee-kitchen-bar.com/" target="_blank" rel="noopener noreferrer">
+            <span>02</span>
+            <div><strong>Basic Kitchen Bowls</strong><small>Bahnhofstraße 36 · Marburg</small></div>
+            <b aria-hidden="true">↗</b>
+          </a>
+          <a class="family-row reveal" href="https://www.basiccoffee-kitchen-bar.com/basic-bar" target="_blank" rel="noopener noreferrer">
+            <span>03</span>
+            <div><strong>Basic Kitchen Coffee Bar</strong><small>Reitgasse 6 · Marburg</small></div>
+            <b aria-hidden="true">↗</b>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="order-cta" aria-labelledby="order-title">
+      <div class="shell order-inner reveal">
+        <p class="eyebrow dark">Keine Zeit vorbeizukommen?</p>
+        <h2 id="order-title">Hungrig?<br><em>Wir liefern.</em></h2>
+        <a class="button button-dark" href="https://www.ubereats.com/de/store/basic-coffee-bagels-%26-sweets/00MKKyeWXCWRomHku4YHHw" target="_blank" rel="noopener noreferrer">Bei Uber Eats bestellen <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-main">
+      <a class="brand footer-brand" href="#top" aria-label="Zurück nach oben">
+        <span class="brand-dot" aria-hidden="true"></span>
+        <span class="brand-copy"><strong>basic</strong><span>coffee</span></span>
+      </a>
+      <div class="footer-links">
+        <a href="tel:+4964218856817">Telefon</a>
+        <a href="mailto:info@basic-coffee.com">E-Mail</a>
+        <a href="https://www.basiccoffee-kitchen-bar.com/" target="_blank" rel="noopener noreferrer">Offizielle Website ↗</a>
+      </div>
+    </div>
+    <div class="shell footer-bottom">
+      <p>© <span id="year">2026</span> Basic Coffee · Redesign-Konzept</p>
+      <p>Bildwelt illustrativ · Unternehmensdaten nach öffentlich veröffentlichten Angaben.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
 </body>
 </html>
