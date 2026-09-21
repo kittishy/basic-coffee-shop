@@ -38,6 +38,15 @@
     });
   }
 
+  document.querySelectorAll('[data-event]').forEach(element => {
+    element.addEventListener('click', () => {
+      const name = element.dataset.event;
+      if (name && typeof window.va === 'function') {
+        window.va('event', { name });
+      }
+    });
+  });
+
   const updateHeader = () => {
     if (header) header.classList.toggle('scrolled', window.scrollY > 12);
   };
