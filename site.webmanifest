@@ -1,12 +1,12 @@
 {
-  "name": "Lisa's Café",
-  "short_name": "Lisa's Café",
-  "description": "Cafés especiais e doces artesanais inspirados na delicadeza coreana.",
-  "lang": "pt-BR",
+  "name": "Basic Coffee",
+  "short_name": "Basic Coffee",
+  "description": "Basic Coffee Bagels & Sweets in Marburg.",
+  "lang": "de-DE",
   "start_url": "./",
   "display": "standalone",
-  "background_color": "#FBF6EE",
-  "theme_color": "#B85C38",
+  "background_color": "#fbf8f2",
+  "theme_color": "#24372d",
   "icons": [
     {
       "src": "assets/images/favicon.svg",
