@@ -1,0 +1,176 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/br/",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-vercel-ip-country",
+          "value": "BR"
+        }
+      ],
+      "missing": [
+        {
+          "type": "cookie",
+          "key": "basic_locale",
+          "value": "de"
+        }
+      ],
+      "permanent": false
+    },
+    {
+      "source": "/speisekarte/",
+      "destination": "/br/cardapio/",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-vercel-ip-country",
+          "value": "BR"
+        }
+      ],
+      "missing": [
+        {
+          "type": "cookie",
+          "key": "basic_locale",
+          "value": "de"
+        }
+      ],
+      "permanent": false
+    },
+    {
+      "source": "/bestellen/",
+      "destination": "/br/pedir/",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-vercel-ip-country",
+          "value": "BR"
+        }
+      ],
+      "missing": [
+        {
+          "type": "cookie",
+          "key": "basic_locale",
+          "value": "de"
+        }
+      ],
+      "permanent": false
+    },
+    {
+      "source": "/fruehstueck-marburg/",
+      "destination": "/br/cafe-da-manha-marburg/",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-vercel-ip-country",
+          "value": "BR"
+        }
+      ],
+      "missing": [
+        {
+          "type": "cookie",
+          "key": "basic_locale",
+          "value": "de"
+        }
+      ],
+      "permanent": false
+    },
+    {
+      "source": "/bagels-marburg/",
+      "destination": "/br/bagels-marburg/",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-vercel-ip-country",
+          "value": "BR"
+        }
+      ],
+      "missing": [
+        {
+          "type": "cookie",
+          "key": "basic_locale",
+          "value": "de"
+        }
+      ],
+      "permanent": false
+    },
+    {
+      "source": "/basic-kitchen-bowls/",
+      "destination": "/br/basic-kitchen-bowls/",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-vercel-ip-country",
+          "value": "BR"
+        }
+      ],
+      "missing": [
+        {
+          "type": "cookie",
+          "key": "basic_locale",
+          "value": "de"
+        }
+      ],
+      "permanent": false
+    },
+    {
+      "source": "/basic-kitchen-coffee-bar/",
+      "destination": "/br/basic-kitchen-coffee-bar/",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-vercel-ip-country",
+          "value": "BR"
+        }
+      ],
+      "missing": [
+        {
+          "type": "cookie",
+          "key": "basic_locale",
+          "value": "de"
+        }
+      ],
+      "permanent": false
+    },
+    {
+      "source": "/impressum/",
+      "destination": "/br/informacoes-legais/",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-vercel-ip-country",
+          "value": "BR"
+        }
+      ],
+      "missing": [
+        {
+          "type": "cookie",
+          "key": "basic_locale",
+          "value": "de"
+        }
+      ],
+      "permanent": false
+    },
+    {
+      "source": "/datenschutz/",
+      "destination": "/br/privacidade/",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-vercel-ip-country",
+          "value": "BR"
+        }
+      ],
+      "missing": [
+        {
+          "type": "cookie",
+          "key": "basic_locale",
+          "value": "de"
+        }
+      ],
+      "permanent": false
+    }
+  ]
+}
