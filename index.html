@@ -16,7 +16,7 @@
   <meta property="og:title" content="Café in Marburg | Kaffee, Bagels & Frühstück | Basic">
   <meta property="og:description" content="Kaffee, Bagels, Frühstück, Smoothies und süße Lieblingsstücke direkt am Marburger Hauptbahnhof.">
   <meta property="og:url" content="https://basic-coffee-shop.vercel.app/">
-  <meta property="og:image" content="https://basic-coffee-shop.vercel.app/assets/images/basic-hero.webp">
+  <meta property="og:image" content="https://basic-coffee-shop.vercel.app/api/basic-image?key=hero">
   <meta property="og:image:alt" content="Basic Coffee — Coffee-Shop-Atmosphäre">
   <meta name="twitter:card" content="summary_large_image">
 
@@ -99,7 +99,7 @@
 
   <main id="main">
     <section class="hero" id="hero" aria-labelledby="hero-title">
-      <img class="hero-image" src="assets/images/basic-hero.webp" width="800" height="450" alt="Warme Coffee-Shop-Szene mit Theke, Kaffee und Gebäck" fetchpriority="high">
+      <img class="hero-image" src="/api/basic-image?key=hero" width="1920" height="1080" alt="Basic Coffee in Marburg" fetchpriority="high">
       <div class="hero-shade" aria-hidden="true"></div>
       <div class="shell hero-inner">
         <div class="hero-copy reveal">
@@ -198,7 +198,7 @@
     <section class="story" id="story" aria-labelledby="story-title">
       <div class="shell story-grid">
         <div class="story-image-wrap reveal">
-          <img src="assets/images/basic-brunch.webp" width="800" height="600" loading="lazy" alt="Kaffee, Bagel und Gebäck auf einem Holztisch">
+          <img src="/api/basic-image?key=story" width="1920" height="1280" loading="lazy" alt="Basic Coffee in Marburg">
           <p class="image-note">Kaffee, Bagels & kleine Pausen</p>
         </div>
 
@@ -232,13 +232,13 @@
         </div>
         <div class="photo-grid local-photo-grid">
           <figure class="photo-card photo-card-large reveal">
-            <img src="assets/images/basic-hero.webp" loading="lazy" alt="Coffee-Shop-Atmosphäre mit warmer Holztheke">
+            <img src="/api/basic-image?key=location2" loading="lazy" alt="Basic Coffee in Marburg">
           </figure>
           <figure class="photo-card reveal">
-            <img src="assets/images/basic-brunch.webp" loading="lazy" alt="Kaffee, Bagel und Gebäck">
+            <img src="/api/basic-image?key=location3" loading="lazy" alt="Basic Coffee Innenraum">
           </figure>
-          <figure class="photo-card photo-crop-detail reveal">
-            <img src="assets/images/basic-hero.webp" loading="lazy" alt="Detail einer modernen Café-Theke">
+          <figure class="photo-card reveal">
+            <img src="/api/basic-image?key=location6" loading="lazy" alt="Basic Coffee Atmosphäre">
           </figure>
         </div>
       </div>
