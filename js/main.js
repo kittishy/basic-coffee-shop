@@ -58,6 +58,15 @@
     reveals.forEach(element => observer.observe(element));
   }
 
+  document.querySelectorAll('.official-photo[data-fallback]').forEach(img => {
+    img.addEventListener('error', () => {
+      const fallback = img.dataset.fallback;
+      if (!fallback || img.src.endsWith(fallback)) return;
+      img.src = fallback;
+      img.classList.add('using-fallback');
+    }, { once: true });
+  });
+
   const year = document.querySelector('#year');
   if (year) year.textContent = String(new Date().getFullYear());
 })();
