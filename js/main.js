@@ -5,13 +5,17 @@
   const toggle = document.querySelector('.nav-toggle');
   const nav = document.querySelector('.primary-nav');
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const isPortuguese = document.documentElement.lang.toLowerCase().startsWith('pt');
+  const menuLabels = isPortuguese
+    ? { open: 'Abrir menu', close: 'Fechar menu' }
+    : { open: 'Menü öffnen', close: 'Menü schließen' };
 
   const closeMenu = (restoreFocus = false) => {
     if (!header || !toggle) return;
     header.classList.remove('menu-open');
     document.body.classList.remove('menu-open');
     toggle.setAttribute('aria-expanded', 'false');
-    toggle.setAttribute('aria-label', 'Menü öffnen');
+    toggle.setAttribute('aria-label', menuLabels.open);
     if (restoreFocus) toggle.focus();
   };
 
@@ -21,7 +25,7 @@
       header.classList.toggle('menu-open', open);
       document.body.classList.toggle('menu-open', open);
       toggle.setAttribute('aria-expanded', String(open));
-      toggle.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
+      toggle.setAttribute('aria-label', open ? menuLabels.close : menuLabels.open);
     });
 
     nav.addEventListener('click', event => {

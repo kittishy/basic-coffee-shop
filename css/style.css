@@ -285,3 +285,24 @@ button{font:inherit}
 .photo-crop-detail:hover img{transform:scale(1.15)}
 @media(max-width:900px){.menu-location-grid{grid-template-columns:1fr}.menu-section{grid-template-columns:40px 1fr}}
 @media(max-width:600px){.menu-page .seo-page-main{padding-top:48px}.menu-tabs{margin-bottom:38px}.menu-section h2{font-size:31px}.menu-locations{padding-top:56px}}
+
+.header-actions{display:flex;align-items:center;justify-self:end;gap:10px}
+.locale-switch{display:inline-flex;align-items:center;justify-content:center;min-width:36px;height:36px;padding:0 9px;border:1px solid var(--line);border-radius:999px;text-decoration:none;font-size:11px;font-weight:700;letter-spacing:.08em;transition:background .18s,border-color .18s}
+.locale-switch:hover{background:var(--cream);border-color:rgba(29,37,31,.25)}
+.footer-locale{font-weight:700}
+.br-faq{padding:120px 0;background:var(--paper);border-top:1px solid var(--line)}
+.br-faq-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.br-faq-grid article{padding:30px;border:1px solid var(--line);border-radius:20px;background:rgba(255,255,255,.32)}
+.br-faq-grid h3{font-family:var(--display);font-size:28px;font-weight:400;line-height:1.05;margin-bottom:14px}
+.br-faq-grid p{font-size:14px;color:#626d63}
+@media(max-width:900px){
+  .header-actions{order:3}
+  .header-actions .header-cta{order:initial}
+  .br-faq-grid{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  .header-actions{gap:6px}
+  .locale-switch{min-width:32px;height:32px;padding:0 7px;font-size:10px}
+  .br-faq{padding:78px 0}
+  .br-faq-grid article{padding:24px}
+}
